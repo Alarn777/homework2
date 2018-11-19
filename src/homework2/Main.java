@@ -4,6 +4,7 @@ import homework2.Inheritance.Motorcycle.*;
 import homework2.Inheritance.GreatPoint.*;
 import homework2.Inheritance.Shape.*;
 import homework2.Inheritance.CalorieSorting.*;
+import homework2.Inheritance.SortingHelloableObjects.*;
 public class Main {
     public static void main(String[] args){
         RomanticCheckRun();
@@ -16,8 +17,17 @@ public class Main {
 
         ShapeRun();
 
+        RestaurantRun();
+
+        Test temp = new Test();
+        Test.testThis();
+
+    }
+
+    private static void RestaurantRun() {
         Restaurant temp = new Restaurant();
         temp.test();
+        System.out.println();
     }
 
     private static void ShapeRun() {

@@ -21,6 +21,10 @@ class Food implements Comparable
         else
             return 0;
     }
+
+
+
+
     public String toString()
     {
         return "calories= "+calories;
