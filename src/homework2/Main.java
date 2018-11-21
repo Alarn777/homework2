@@ -5,6 +5,8 @@ import homework2.Inheritance.GreatPoint.*;
 import homework2.Inheritance.Shape.*;
 import homework2.Inheritance.CalorieSorting.*;
 import homework2.Inheritance.SortingHelloableObjects.*;
+import homework2.InnerClasses.AdditionalMembers.*;
+import homework2.InnerClasses.PrivateMembersAccess.*;
 public class Main {
     public static void main(String[] args){
         RomanticCheckRun();
@@ -19,9 +21,34 @@ public class Main {
 
         RestaurantRun();
 
+        SortingHelloableObjectsRun();
+
+
+        ReflectionDemoRun();
+
+        PrivateMembersAccessRun();
+    }
+
+    private static void PrivateMembersAccessRun() {
+        ClassOne temp = new ClassOne();
+        temp.test();
+
+
+        ClassTwo.InsideClass temp1 = new ClassTwo().new InsideClass(1);
+        temp1.test();
+    }
+
+    private static void ReflectionDemoRun() {
+        ReflectionDemo temp = new ReflectionDemo();
+        String arg[] = new String[1];
+        arg[0] = "MyClass";
+        temp.test(arg);
+    }
+
+    private static void SortingHelloableObjectsRun() {
         Test temp = new Test();
         Test.testThis();
-
+        System.out.println();
     }
 
     private static void RestaurantRun() {
